@@ -8,6 +8,12 @@ on:
     paths-ignore:
       - "README.md"
 
+env:
+  IMAGE_NAME: 'tred7/scrapyd'
+  SCRAPYD_VERSION: 1.4.1
+  SCRAPY_VERSION: 2.8.0
+  SCRAPYD_CLIENT_VERSION: 1.2.3
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -33,6 +39,6 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            ${{ env.IMAGE_NAME }}:${{ env.SCRAPYD_VERSION }}-${{ env.SCRAPY_VERSION }}
+            ${{ env.IMAGE_NAME }}:${{ env.SCRAPYD_VERSION }}-${{ env.SCRAPY_VERSION }}-${{ env.SCRAPYD_CLIENT_VERSION }}
             ${{ env.IMAGE_NAME }}:latest
           push: true
