@@ -5,8 +5,6 @@ ARG SCRAPY_VERSION=2.8.0
 ARG SCRAPYD_VERSION=1.4.1
 ARG SCRAPYD_CLIENT_VERSION=v1.2.3
 
-ENV SCRAPYD_USERNAME=root
-ENV SCRAPYD_PASSWORD=root
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 EXPOSE 6800
